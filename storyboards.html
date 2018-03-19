@@ -24,16 +24,58 @@
           <li class="nav-item">
             <a class="nav-link" href="meettheteam.html">Meet the team</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="developmentLog.html">Development Log</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a id="contactUsBtn" class="nav-link" href="#" data-toggle="modal" data-target="#contact-modal">Contact Us</a>
+          </li>
         </ul>
       </div>
     </nav>
 
+    <!--Contact us modal-->
+    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contactUsTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!--Gives us the 'x' in top right corner-->
+            <h2 class="modal-title" id="contactUsNewMessageText">Contact Us</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <!--The text in the header-->
+          </div>
+          <div class="modal-body">
+            <!--Allows us the use the feedback system when submit is clicked-->
+            <form method="POST" action="includes/feedback-system.inc.php">
+                <!--Name text field-->
+                <label for="sender-name" class="form-control-label contactUsTitle">Name:</label><br>
+                <input type="text" class="form-control" name="name" id="sender-name" required>
+                <br>
+                <!--email text field-->
+                <label for="sender-email" class="form-control-label contactUsTitle">E-mail:</label><br>
+                <input type="email" class="form-control" name="email" id="sender-email" required>
+                <br>
+                <!--Message textarea-->
+                <label for="message-text" class="form-control-label contactUsTitle">Message:</label><br>
+                <textarea class="form-control" name="message" id="message-text" required></textarea>
+                <div class="modal-footer">
+                  <input data-dismiss="modal" class="btn" type="button" value="Cancel">
+                  <input type="submit" class="btn btn-primary" name="contactusSubmitBtn" value="Submit">
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="sb-container">
       <h1>Super Coliseum Storyboards</h1>
-      <h4>See some preliminary artwork for Super Coliseum</h4>
+      <h4>See some preliminary concept art for Super Coliseum</h4>
       <div id="enemySB">
         <h3 class="sb-title-text">Enemies</h3>
-        <hr id="enemy-HR">
+        <hr id="enemy-HR-sb">
         <img class="sb-img" src="images/enemySB2.png">
         <p class="top-caption-text"><b>A.</b> The arena will be filled with a large number of <b>fodder enemies</b>. These are characterized
           by <u>low health</u> (1-2 hits), <u>low damage</u> (1 heart max), and <u>slow speeds</u> (~ 2/3 slowest hero speed)</p>
@@ -54,8 +96,15 @@
         <p>Each class has different attributes and perks. For example, the Knight class has the most health of the three but moves the slowest. The player can move to each different class by simply moving left and right
           with the controller. Once the player has decided on which class they would like to use during the duration of the game, they can press the action button to start playing!</p>
       </div>
+      <div id="heroDrawingsSB">
+        <h3 clss="sb-title-text">Heroes</h3>
+        <hr id="heroes-HR-sb">
+        <img class="sb-img" src="images/heroes.png">
+        <p class="top-caption-text">Here we have the first concept art for our three main characters, or heroes as we like to call them. From right to left you have the <b>Knight</b>, the <b>Ranger</b>, and the <b>Mage</b>, respectively. Each hero is
+        drawn with their main weapons and the mage is drawn not only with its main weapon but also a glimpse at the its special move which includes summoning and throwing fireballs.</p>
+      </div>
       <div id="heroClassesSB">
-        <h3 class="sb-title-text">Hero Classes</h3>
+        <h3 class="sb-title-text">Hero Attacks</h3>
         <hr id="hero-classes-HR">
         <img class="sb-img" src="images/classesSB1.png">
         <img class="sb-img" src="images/classesSB2.png">

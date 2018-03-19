@@ -24,10 +24,51 @@
           <li class="nav-item">
             <a class="nav-link" href="meettheteam.html">Meet the team</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="developmentLog.html">Development Log</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a id="contactUsBtn" class="nav-link" href="#" data-toggle="modal" data-target="#contact-modal">Contact Us</a>
+          </li>
         </ul>
       </div>
     </nav>
 
+    <!--Contact us modal-->
+    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contactUsTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!--Gives us the 'x' in top right corner-->
+            <h2 class="modal-title" id="contactUsNewMessageText">Contact Us</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <!--The text in the header-->
+          </div>
+          <div class="modal-body">
+            <!--Allows us the use the feedback system when submit is clicked-->
+            <form method="POST" action="includes/feedback-system.inc.php">
+                <!--Name text field-->
+                <label for="sender-name" class="form-control-label contactUsTitle">Name:</label><br>
+                <input type="text" class="form-control" name="name" id="sender-name" required>
+                <br>
+                <!--email text field-->
+                <label for="sender-email" class="form-control-label contactUsTitle">E-mail:</label><br>
+                <input type="email" class="form-control" name="email" id="sender-email" required>
+                <br>
+                <!--Message textarea-->
+                <label for="message-text" class="form-control-label contactUsTitle">Message:</label><br>
+                <textarea class="form-control" name="message" id="message-text" required></textarea>
+                <div class="modal-footer">
+                  <input data-dismiss="modal" class="btn" type="button" value="Cancel">
+                  <input type="submit" class="btn btn-primary" name="contactusSubmitBtn" value="Submit">
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="sc-container">
       <h1>Introducing Super Coliseum</h1>
@@ -36,14 +77,14 @@
       <div id="article-text">
         <p>Our game seeks to combine several existing, proven gameplay concepts to create a unique, fast-paced action game. In the game, the player selects one of three heroes to play as: the knight, the ranger, or the mage. The player’s chosen hero is then transported to a large, open, arena-style environment, where their goal is to defeat a powerful boss monster. In addition to the boss monster itself, the player must contend with hordes of other monsters, which vary in strength, speed, number, ability, and amount of health. </p>
         <h4>Heroes</h4>
-        <hr class="article-text-HR">
+        <hr id="heroes-HR-sc">
         <p>Each of the heroes that the player can choose is optimized for a specific playstyle. The knight is focused on survivability. While the knight has most health and receives the most armor from armor items, they are the slowest of the three heroes and have the shortest range. Meanwhile he ranger is focused on speed. They have half the health of the knight and receive half as much armor from armor pickups, however they can move twice as fast and attack at long range. Meanwhile, the mage is a middle ground between the ranger and knight. Their health, armor, speed, and attack range are between the knight and the ranger.</p>
         <h4>Enemies</h4>
-        <hr class="article-text-HR">
+        <hr id="enemy-HR-sc">
         <p>The enemies are broken up into five different types. The most numerous type of enemy are “fodder enemies” which attack the player character in large hordes, but are destroyed easily and do little damage. Some enemies are “warrior enemies,” which are less common than fodder enemies but take more hits and employ more complex tactics. Additionally, there are “brute enemies” and “support enemies.” “Brute enemies” have large amounts of health and special attacks. “Support enemies” have special moves which can heal or revive other enemies. These enemies continually re-spawn until the player’s goal is met.</p>
         <p>While contending with these enemies, the player’s ultimate goal is to defeat the “boss enemy.” The “boss enemy” has a very large amount of health and numerous special attacks. The player must simultaneously avoid being overwhelmed by the large number of re-spawning enemies, watch out for attacks and special moves coming from the “boss enemy,” and work towards landing attacks on the “boss enemy” in order to succeed. The goal is to use these mechanics to create frantic, fast-paced gameplay where the player must keep track of many threats at once while making progress towards their goal.</p>
         <h4>Combat</h4>
-        <hr class="article-text-HR">
+        <hr id="combat-HR-sc">
         <p>The combat takes place in a large open arena filled with obstacles. Walls and pits act to disrupt the player’s movement, but the overall design encourages mobility. The arena avoids spaces where the player is trapped by the environment in favor of spaces which guide the player into varied, interesting situations.</p>
       </div>
     </div>

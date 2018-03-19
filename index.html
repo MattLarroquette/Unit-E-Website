@@ -25,15 +25,58 @@
           <li class="nav-item">
             <a class="nav-link" href="meettheteam.html">Meet the team</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="developmentLog.html">Development Log</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a id="contactUsBtn" class="nav-link" href="#" data-toggle="modal" data-target="#contact-modal">Contact Us</a>
+          </li>
         </ul>
       </div>
     </nav>
 
+    <!--Contact us modal-->
+    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contactUsTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!--Gives us the 'x' in top right corner-->
+            <h2 class="modal-title" id="contactUsNewMessageText">Contact Us</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <!--The text in the header-->
+          </div>
+          <div class="modal-body">
+            <!--Allows us the use the feedback system when submit is clicked-->
+            <form method="POST" action="includes/feedback-system.inc.php">
+                <!--Name text field-->
+                <label for="sender-name" class="form-control-label contactUsTitle">Name:</label><br>
+                <input type="text" class="form-control" name="name" id="sender-name" required>
+                <br>
+                <!--email text field-->
+                <label for="sender-email" class="form-control-label contactUsTitle">E-mail:</label><br>
+                <input type="email" class="form-control" name="email" id="sender-email" required>
+                <br>
+                <!--Message textarea-->
+                <label for="message-text" class="form-control-label contactUsTitle">Message:</label><br>
+                <textarea class="form-control" name="message" id="message-text" required></textarea>
+                <div class="modal-footer">
+                  <input data-dismiss="modal" class="btn" type="button" value="Cancel">
+                  <input type="submit" class="btn btn-primary" name="contactusSubmitBtn" value="Submit">
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
+      <ol id="indicators" class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -57,6 +100,13 @@
             <p>Meet the team behind Super Coliseum!</p>
           </div>
         </div>
+        <div class="carousel-item">
+          <a href="developmentLog.html"><img class="d-block w-100" src="images/heroesPixel.png" alt="Fourth slide"></a>
+          <div class="carousel-caption">
+            <h1>Development Log</h1>
+            <p>Keep track of Super Coliseum's development!</p>
+          </div>
+        </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -68,61 +118,148 @@
       </a>
     </div>
 
+    <!--Latest News Carousel-->
     <div class="latest-news-container">
       <h3 class="lnudTitle">Latest News</h3>
       <hr class="lnudHR">
-      <div class="lnudWrapper">
-        <div class="card" style="width: 18rem;">
-          <a href="meettheteam.html"><img class="card-img-top" src="images/logoplaceholder.png" alt="Card image cap"></a>
-          <div class="card-body">
-            <h4 class="card-text">Team Formed</h4>
-            <p class="card-text">February 5, 2018</p>
+      <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#multi-item-example" data-slide-to="0"></li>
+            <li data-target="#multi-item-example" data-slide-to="1" class="active"></li>
+            <li data-target="#multi-item-example" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <!--First slide-->
+            <div class="carousel-item">
+              <div class="lnudWrapper">
+                <div class="card" style="width: 18rem;">
+                  <a href="meettheteam.html"><img class="card-img-top" src="images/logoplaceholder.png" alt="Card image cap"></a>
+                  <div class="card-body">
+                    <h4 class="card-text">Team Formed</h4>
+                    <p class="card-text">February 5, 2018</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                  <a href="supercoliseuminfo.html"><img class="card-img-top" src="images/gamelogoplaceholder.png" alt="Card image cap"></a>
+                  <div class="card-body">
+                    <h4 class="card-text">Game Idea Conceived</h4>
+                    <p class="card-text">February 20, 2018</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                  <a href="storyboards.html"><img class="card-img-top" src="images/storyboardSmall.png" alt="Card image cap"></a>
+                  <div class="card-body">
+                    <h4 class="card-text">Storyboards Created</h4>
+                    <p class="card-text">February 21, 2018</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Second slide-->
+            <div class="carousel-item active">
+              <div class="lnudWrapper">
+                <div class="card" style="width: 18rem;">
+                  <a href="developmentLog.html"><img class="card-img-top" src="images/heroesCard.png" alt="Card image cap"></a>
+                  <div class="card-body">
+                    <h4 class="card-text">Hero Concept Art</h4>
+                    <p class="card-text">February 26, 2018</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                  <a href="developmentLog.html"><img class="card-img-top" src="images/rangerCard.png" alt="Card image cap"></a>
+                  <div class="card-body">
+                    <h4 class="card-text">Ranger Pixel Art</h4>
+                    <p class="card-text">March 12, 2018</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                  <a href="developmentLog.html"><img class="card-img-top" src="images/knightCard.png" alt="Card image cap"></a>
+                  <div class="card-body">
+                    <h4 class="card-text">Knight Pixel Art</h4>
+                    <p class="card-text">March 14, 2018</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Third Slide-->
+            <div class="carousel-item">
+              <div class="lnudWrapper">
+                <div class="card" style="width: 18rem;">
+                  <a href="developmentLog.html"><img class="card-img-top" src="images/mageCard.png" alt="Card image cap"></a>
+                  <div class="card-body">
+                    <h4 class="card-text">Mage Pixel Art</h4>
+                    <p class="card-text">March 15, 2018</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                  <a href="developmentLog.html"><img class="card-img-top" src="images/fodderCard.png" alt="Card image cap"></a>
+                  <div class="card-body">
+                    <h4 class="card-text">Fodder Pixel Art</h4>
+                    <p class="card-text">March 17, 2018</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <a href="supercoliseuminfo.html"><img class="card-img-top" src="images/gamelogoplaceholder.png" alt="Card image cap"></a>
-          <div class="card-body">
-            <h4 class="card-text">Game Idea Conceived</h4>
-            <p class="card-text">February 20, 2018</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <a href="storyboards.html"><img class="card-img-top" src="images/storyboardSmall.png" alt="Card image cap"></a>
-          <div class="card-body">
-            <h4 class="card-text">Storyboards Created</h4>
-            <p class="card-text">February 21, 2018</p>
-          </div>
-        </div>
+          <!--end slides-->
+          <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
       </div>
     </div>
 
     <div class="upcoming-dates-container">
       <h3 class="lnudTitle">Upcoming Dates</h3>
       <hr class="lnudHR">
-      <div class="lnudWrapper">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="images/logoplaceholder.png" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-text">Unit-E Team Meeting</h4>
-            <p class="card-text">February 25, 2018</p>
+      <div id="multi-item-example1" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#multi-item-example1" data-slide-to="0" class="active"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!--First slide-->
+          <div class="carousel-item active">
+            <div class="lnudWrapper">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="images/logoplaceholder.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-text">Unit-E Team Meeting</h4>
+                  <p class="card-text">February 25, 2018</p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="images/group.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-text">Game Announcement</h4>
+                  <p class="card-text">Feb. 27</p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="images/demo.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-text">Game Demo, Q & A</h4>
+                  <p class="card-text">Mar. 20 - Mar. 22</p>
+                </div>
+              </div>
+            </div>
           </div>
+          <!--end first-->
         </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="images/comingsoon.png" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-text">Game Announcement</h4>
-            <p class="card-text">Feb. 27 - Mar. 1</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="images/demo.png" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-text">Game Demo, Q & A</h4>
-            <p class="card-text">TBA</p>
-          </div>
-        </div>
+        <!--end-->
+        <a class="carousel-control-prev" href="#multi-item-example1" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#multi-item-example1" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-    </div>
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

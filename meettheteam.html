@@ -24,9 +24,51 @@
           <li class="nav-item">
             <a class="nav-link" href="meettheteam.html">Meet the team</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="developmentLog.html">Development Log</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a id="contactUsBtn" class="nav-link" href="#" data-toggle="modal" data-target="#contact-modal">Contact Us</a>
+          </li>
         </ul>
       </div>
     </nav>
+
+    <!--Contact us modal-->
+    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contactUsTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!--Gives us the 'x' in top right corner-->
+            <h2 class="modal-title" id="contactUsNewMessageText">Contact Us</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <!--The text in the header-->
+          </div>
+          <div class="modal-body">
+            <!--Allows us the use the feedback system when submit is clicked-->
+            <form method="POST" action="includes/feedback-system.inc.php">
+                <!--Name text field-->
+                <label for="sender-name" class="form-control-label contactUsTitle">Name:</label><br>
+                <input type="text" class="form-control" name="name" id="sender-name" required>
+                <br>
+                <!--email text field-->
+                <label for="sender-email" class="form-control-label contactUsTitle">E-mail:</label><br>
+                <input type="email" class="form-control" name="email" id="sender-email" required>
+                <br>
+                <!--Message textarea-->
+                <label for="message-text" class="form-control-label contactUsTitle">Message:</label><br>
+                <textarea class="form-control" name="message" id="message-text" required></textarea>
+                <div class="modal-footer">
+                  <input data-dismiss="modal" class="btn" type="button" value="Cancel">
+                  <input type="submit" class="btn btn-primary" name="contactusSubmitBtn" value="Submit">
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="pics-container">
       <h1>Meet The Team!</h1>

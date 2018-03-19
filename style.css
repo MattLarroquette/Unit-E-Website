@@ -4,6 +4,7 @@ html{
 }
 body{
   line-height:1.4;
+  font-family: 'Ubuntu', sans-serif;
 }
 h1, p{
   font-family: 'Ubuntu', sans-serif;
@@ -28,6 +29,13 @@ h3{
   width:30px;
   height:30px;
   background-color: black;
+}
+#indicators{
+  position:relative;
+  bottom:-470px;
+}
+#indicators .active{
+  background-color: white;
 }
 /*Controls navbar text*/
 .navbar-light .navbar-nav .nav-link{
@@ -54,10 +62,12 @@ h3{
 .lnudTitle{
   text-align: center;
   padding-top: 40px;
+
 }
 .lnudHR{
   width:30%;
   border:1px solid #817AAF;
+  margin-bottom: 0;
 }
 .lnudWrapper{
   display:grid;
@@ -80,6 +90,21 @@ h3{
   margin:auto;
   margin-top: 30px;
 }
+#enemy-HR-sc{
+  width:13%;
+  border:1px solid #817AAF;
+  margin-left: 0;
+}
+#heroes-HR-sc{
+  width:11%;
+  border:1px solid #817AAF;
+  margin-left: 0;
+}
+#combat-HR-sc{
+  width:12%;
+  border:1px solid #817AAF;
+  margin-left: 0;
+}
 #article-img{
   width:100%;
   height:auto;
@@ -87,11 +112,6 @@ h3{
 }
 #article-text{
   padding-top: 20px;
-}
-.article-text-HR{
-  width:14%;
-  border:1px solid #817AAF;
-  margin-left: 0;
 }
 #sb-container{
   font-family: 'Ubuntu', sans-serif;
@@ -104,8 +124,13 @@ h3{
 .sb-title-text{
   padding-top: 30px;
 }
-#enemy-HR{
-  width:16%;
+#enemy-HR-sb{
+  width:15%;
+  border:1px solid #817AAF;
+  margin-left: 0;
+}
+#heroes-HR-sb{
+  width:13%;
   border:1px solid #817AAF;
   margin-left: 0;
 }
@@ -159,4 +184,49 @@ h3{
   display:grid;
   grid-template-columns: repeat(2,1fr);
   margin-right: 50px;
+}
+.btn, .btn-primary{
+  background-color: #817AAF;
+  color:white;
+}
+.btn:hover, .btn-primary:hover{
+  background-color: #393074;
+  color:white;
+}
+.makesmall{
+  width:35%;
+  margin-right: 70px;
+}
+.gif{
+  width:375px;
+  height:275px;
+}
+.devlogHR{
+  border:1px solid #817AAF;
+}
+.logEntry{
+  margin-top: 40px;
+}
+#logEntrySpecial{
+  margin-top: 70px;
+}
+
+#multi-item-example{
+  width:100%;
+}
+#multi-item-example1{
+  width:100%;
+}
+.carousel-indicators{
+  position:relative;
+  bottom:-395px;
+}
+.carousel-indicators li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+}
+.carousel-indicators .active{
+  background-color: #817AAF;
 }
